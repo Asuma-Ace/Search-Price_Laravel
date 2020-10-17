@@ -16,7 +16,13 @@
 </header>
 
 <main>
-<div class="user_jc container">ようこそ、<strong>ゲスト</strong>さん</div>
+<div class="user_jc container">ようこそ、<strong>
+  @auth
+    {{Auth::user()->name}}
+  @else
+    ゲスト
+  @endauth
+</strong>さん</div>
   @yield('content')
 </main>
 

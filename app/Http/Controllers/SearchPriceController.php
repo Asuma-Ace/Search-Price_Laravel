@@ -38,32 +38,33 @@ class SearchPriceController extends Controller
     }
 
      /**
-     * ログイン処理
-     * 
-     * @return view
-     */
-    public function userConfirm(loginRequest $request)
-    {
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-
-            return redirect()->action('SearchPriceController@userComplete');
-        } 
-        // else {
-        //     return redirect()->action('SearchPriceController@login');
-        // }
-    }
-
-     /**
      * ログイン完了画面を表示
      * 
      * @return view
      */
     public function userComplete()
     {
-        return view('user.complete');
+        if(Auth::check()) {
+            return view('user.complete');
+        } else {
+            return view('user.login');
+        }
     }
+
+     /**
+     * ログアウト画面を表示
+     * 
+     * @return view
+     */
+    public function userLogout()
+    {
+        if(!Auth::check()) {
+            return view('user.logout');
+        } else {
+            return redirect()->action('Auth\LoginController@logout');
+        }
+    }
+
 
      /**
      * 新規会員登録画面を表示

@@ -1,15 +1,3 @@
-<?php
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : NULL;
-$password = isset($_SESSION['password']) ? $_SESSION['password'] : NULL;
-$error = isset($_SESSION['error']) ? $_SESSION['error'] : NULL;
-
-if ($email === NULL && $password === NULL) {
-  if (!empty($_COOKIE['email']) && !empty($_COOKIE['password'])) {
-    $email = $_COOKIE['email'];
-    $password = $_COOKIE['password'];
-  }
-}
-?>
 @extends('layouts.master')
 @section('title', 'ログイン')
 @section('css')
@@ -40,13 +28,10 @@ if ($email === NULL && $password === NULL) {
           @error('password')
             <p class="error">{{ $message }}</p>
           @enderror
-          <?php if ($error['login'] =='false' ): ?>
-          <p class="error">* ログインに失敗しました。正しく入力してください</p>
-        <?php endif; ?>
         </div>
 
         <input id="save" type="checkbox" name="remember" value="on" {{ old('remember') ? 'checked' : '' }}>
-        <label for="save" class="save">メールアドレスとパスワードを保存</label>
+        <label for="save" class="save">次回から自動的にログインする</label>
 
         <button class="btn btn-block btn-default mt-2 mb-2" type="submit">
           ログイン

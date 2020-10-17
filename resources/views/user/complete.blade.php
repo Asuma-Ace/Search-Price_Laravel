@@ -67,7 +67,7 @@ if (isset($_SESSION['id'])) {
   <h1 class="text-center">ログイン</h1>
   <div class="card mt-3">
     <div class="card-body text-center mail_box">
-      <h2 class="h3 card-title text-center mt-2">ようこそtestさん！</h2>
+      <h2 class="h3 card-title text-center mt-2">ようこそ{{Auth::user()->name}}さん！</h2>
       <div id="content">
         <p>ログインが完了しました</p>
         <p>

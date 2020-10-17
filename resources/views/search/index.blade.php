@@ -1,93 +1,13 @@
-<?php
-session_start();
-
-function h($str) {
-  if(is_array($str)){
-    return array_map('h', $str);
-  }else{
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
-  }
-}
-
-$login_out_url = "/user/login";
-$login_out = 'ログイン';
-$login_user = 'ゲスト';
-
-if (isset($_SESSION['id'])) {
-  $login_out_url = 'logout.php';
-  $login_out = 'ログアウト';
-  $login_user = '<a href="login_m.php" class="login_user">' .$_SESSION['name'] . '</a>';
-  if ($_SESSION['save'] === 'on' && $_SESSION['time'] + 3600*24*30 > time()) {
-    $_SESSION['time'] = time();
-  } elseif ($_SESSION['time'] + 3600*24 > time()) {
-    $_SESSION['time'] = time();
-  } else {
-    header('Location: logout.php');
-    exit();
-  }
-}
-
-$_SESSION['search']=array();
-
-if (!isset($_SESSION['token'])) {
-  $_SESSION['token'] = sha1(uniqid(mt_rand(), TRUE));
-}
-$token = $_SESSION['token'];
-var_dump($_SESSION);
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" media="screen and (max-width: 1000px)">
-  <title>最安値検索（Yahoo!ショッピング＆楽天市場）</title>
-</head>
-
-<body>
-<header>
-  <div class="container">
-    <div class="header-title">
-      <div id="top-btn" class="header-logo"><a href="{{ route('search') }}">最安値検索<span id="shop">（Yahoo!ショッピング＆楽天市場）</span></a></div>
-    </div>
-    <div id="wrapper">
-      <p class="btn-gnavi btn-re">
-        <span></span>
-        <span></span>
-        <span></span>
-      </p>        
-      <div class="header-menu" id="global-navi">
-        <ul class="header-menu-right">
-          <li>
-            <a href="<?php echo $login_out_url; ?>" onclick="signOut();"><?php echo $login_out; ?></a>
-          </li>
-          <?php if (!isset($_SESSION['id'])): ?>
-          <li>
-            <a href="{{ route('join.new') }}">新規会員登録</a>
-          </li>
-          <?php endif; ?>
-          <li>
-            <a href="{{ route('contact.form') }}">お問い合わせ</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main> 
+@extends('layouts.master')
+@section('title', '最安値検索（Yahoo!ショッピング＆楽天市場）')
+@section('content')
   <form  action="result.php" method="post">
-
+  @csrf
     <div class="search">
       <div class="container">
-        <div class="user_jc">ようこそ、<strong><?php echo $login_user; ?></strong>さん</div>
         <div class="search_key">
           <input id="keyword" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" type="search" name="keyword" size="50" maxlength="64" placeholder="検索キーワードを入力してください" value="" required>
           <button type="submit" id="search_btn"><i class="fas fa-search"></i>検索</button>
-          <input type="hidden" name="token" value="<?php echo h($token); ?>">
         </div>
       </div>
     </div>
@@ -149,15 +69,4 @@ var_dump($_SESSION);
     </div>
 
   </form>
-</main>
-
-<footer>
-  <div class="copyright">&copy; 2020<?php if( date('Y') > "2020") {echo "-".date('Y');}?> Samua</div>
-</fotter>
-
-  <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-  <script src="{{ asset('js/invalidmsg.js') }}"></script>
-  <script src="{{ asset('js/script.js') }}"></script>
-
-</body>
-</html>
+@endsection
