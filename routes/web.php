@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'SearchPriceController@search')->name('search');
 
 // 商品検索結果画面
+Route::get('/result', 'SearchPriceController@searchResult')->name('search.result');
 
 Route::group(['middleware' => 'guest'], function(){
   // ログイン画面
@@ -69,11 +70,6 @@ Route::post('/contact/send', 'SearchPriceController@contactSend')->name('contact
 // お問い合わせ送信完了画面
 Route::get('/contact/complete', 'SearchPriceController@contactComplete')->name('contact.complete');
 
-Auth::routes();
+// Auth::routes();
 
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register');
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

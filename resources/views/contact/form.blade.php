@@ -1,10 +1,3 @@
-<?php
-if (isset($_SESSION['id'])) {
-  if (!empty($_COOKIE['email'])) {
-    $email = $_COOKIE['email'];
-  }
-}
-?>
 @extends('layouts.master')
 @section('title', 'お問い合わせフォーム 内容入力画面')
 @section('css')
