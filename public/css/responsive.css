@@ -1,0 +1,317 @@
+@media screen and (max-width: 1100px) {
+  .content_form {
+    padding: 0 160px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+/* hamburger */
+  #global-navi {
+    position: fixed;
+  }
+
+  .header-menu-right li {
+    float: none;
+  }
+
+  #wrapper div {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 190px;
+    padding-top: 50px;
+    background:azure;
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 2
+  }
+
+  #wrapper div ul li {
+    display:block;
+    padding: 20px 28px
+  }
+ 
+  #wrapper .btn-gnavi {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 3;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+  }
+ 
+  #wrapper .btn-gnavi span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #666;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+  }
+ 
+  #wrapper .btn-gnavi span:nth-child(1) {
+    top: 0
+  }
+ 
+  #wrapper .btn-gnavi span:nth-child(2) {
+    top: 10px
+  }
+ 
+  #wrapper .btn-gnavi span:nth-child(3) {
+    top: 20px
+  }
+ 
+  #wrapper .btn-gnavi.open {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+ 
+  #wrapper .btn-gnavi.open span {
+    width: 24px;
+  }
+/* hamburger */
+
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .mail_box {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content {
+    padding: 0 100px;
+  }
+  
+  .content_form {
+    padding: 0 100px;
+  }
+
+  .header-logo a {
+    font-size: 26px;
+  }
+
+  .header-menu-right a {
+    font-size: 15px;
+  }
+
+  #wrapper div ul li {
+    padding: 0 40px 3px 0;
+  }
+
+  .user_jc {
+    font-size: 13px;
+  }
+
+  #keyword, #search_btn {
+    height: 40px;
+    font-size: 16px;
+    border: solid 2px #3b69f5;
+    padding: 0 5px;
+  }
+
+  .condition_title {
+    font-size: 17px;
+    right: 240px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .detail td {
+    font-size: 14px;
+    padding-right: 50px;
+  }
+
+  .menu_item table, .result_item table {
+    left: 15px;
+  }
+
+  #category {
+    font-size: 14px;
+    border: solid 2px #3b69f5;
+  }
+
+  .price_range select {
+    font-size: 14px;
+    border: solid 2px #3b69f5;
+  }
+
+  #shop {
+    font-size: 17px;
+  }
+
+  .item_card {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .result_name {
+    font-size: 15px;
+  }
+
+  .result_price span {
+    font-size: 22px;
+  }
+
+  .result_price, .result_store, .transition {
+    font-size: 13px;
+  }
+
+  .content h1, .content_form h1 {
+    font-size: 30px;
+    padding-top: 10px;
+  }
+
+  .h3 {
+    font-size: 26px;
+  }
+
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+
+  .md-form {
+    margin-top: 1.0rem;
+  }
+
+  .md-form label {
+    font-size: 12.5px;
+    overflow: unset;
+    top: 5px;
+  }
+
+  *, ::after, ::before {
+    box-sizing: revert;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: unset;
+  }
+
+  .header-logo a {
+    font-size: 20px;
+  }
+
+  #shop {
+    font-size: 11px;
+  }
+
+  #wrapper .btn-gnavi span {
+    width: 25px;
+  }
+
+  #wrapper .btn-gnavi.open {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  #wrapper .btn-gnavi {
+    top: 24px;
+    right: 40px;
+    width: unset;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .h3 {
+    font-size: 20px;
+  }
+
+  input[type="checkbox"] + label:before {
+    width: 15px;
+    height: 15px;
+  }
+
+  .content_form {
+    padding: 0 15px;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .user_jc {
+    font-size: 12px;
+  }
+
+  #keyword, #search_btn {
+    height: 35px;
+    font-size: 15px;
+    top: 0px;
+  }
+
+  #keyword {
+    width: calc(75.5% + 0.5vw);
+  }
+
+  .search_key {
+    padding-top: 15px;
+  }
+
+  .search {
+    padding: 5px 0 30px;
+  }
+
+  .condition_title {
+    font-size: 15px;
+    right: calc(38% + 0.5vw);
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .detail td {
+    font-size: 13px;
+    padding-right: 40px;
+  }
+
+  #category　{
+    font-size: 13px;
+  }
+
+  .price_range {
+    right: 63px;
+  }
+
+  .price_range select {
+    font-size: 13px;
+  }
+
+  .detail_item {
+    left: unset;
+    text-align: center;
+  }
+
+  .detail tr {
+    display: inline-grid;
+  }
+
+  .btn-re {
+    right: 15px !important;
+    width: 30px !important;
+  }
+
+  .item_card tr {
+    display: grid;
+    text-align: center;
+  }
+
+  .item_card table {
+    margin: auto;
+  }
+
+}

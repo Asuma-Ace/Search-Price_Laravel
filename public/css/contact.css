@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.content_form {
+  padding: 0 280px;
+}
+
+.card-body {
+  padding: 1.25rem 3rem;
+}
+
+.md-form label {
+  left: 3px;
+}
+
+#inquiry {
+  padding: 5px !important;
+  margin-top: 2rem;
+}
+
+.inquirylabel {
+  top: -10px !important;
+}
+
+.error {
+  letter-spacing: unset;
+  font-size: 12px;
+  padding-left: 5px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+p {
+  margin-top: 20px;
+}

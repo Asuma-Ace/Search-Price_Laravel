@@ -1,0 +1,377 @@
+@charset "UTF-8";
+/*-------  common  --------*/
+body {
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  margin: 0 auto;
+}
+
+strong {
+  font-weight: bold !important;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.error {
+  padding: 0 15px;
+  font-size: 15px;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+	color: #d41a1a;
+}
+/*-------  common  --------*/
+/*-------  header  --------*/
+header {
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  line-height: 70px;
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.header-title {
+  float: left;
+}
+
+.header-logo a {
+  color: #3b69f5;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-menu-right {
+  float: right;
+}
+
+.header-menu-right li {
+  float: left;
+}
+
+.header-menu-right a {
+  color: #323A45;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.header-menu-right a:hover {
+  color: #3b69f5;
+  transition: color .3s;
+}
+
+#shop {
+  font-size: 23px;
+}
+/*-------  header  --------*/
+/*-------  keyword  --------*/
+.login_user {
+  color: #3b69f5 !important;
+  text-decoration: underline;
+}
+
+.login_user:hover {
+  opacity: 0.8;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+  padding: 5px 0 50px;
+}
+
+.search_key {
+  text-align: center;
+  padding-top: 5px;
+}
+
+#keyword {
+  height: 50px;
+  padding: 0 10px;
+  border: solid 3px #3b69f5;
+  border-radius: 5px 0 0 5px;
+  background: #eee;
+  font-size: 20px;
+}
+
+#search_btn {
+  height: 50px;
+  border: solid 3px #3b69f5;
+  border-radius: 0 5px 5px 0;
+  background-color: #3b69f5;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  position: relative;
+  right: 9px;
+  top: -0.5px;
+}
+
+#search_btn:hover {
+  background-color: #3b69f5;
+  opacity: 0.9;
+  cursor: pointer;
+}
+/*-------  keyword  --------*/
+/*-------  checkbox  --------*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  color: #323A45;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #3b69f5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*-------  checkboxes  --------*/
+/*-------  detailed conditions  --------*/
+.condition {
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.condition_title {
+  text-align: center;
+  right: 270px;
+  position: relative;
+  font-size: 21px;
+  font-weight: 550;
+  padding-bottom: 5px;
+  color: #323A45;
+  cursor: pointer;
+}
+
+.menu_arrow {
+  display: inline-block;
+  transform: rotate(90deg);
+  top: 0px;
+}
+
+.menu_arrow.open {
+  display: inline-block;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: -3px;
+}
+
+.menu_item table,.result_item table {
+  position: relative;
+  left: 45px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 550;
+  padding-bottom: 5px;
+  text-align: left;
+  padding-bottom: 50px;
+  color: #323A45;
+  cursor: default;
+}
+
+.detail {
+  position: relative;
+  top: 13px;
+  right: 70px;
+}
+
+.detail td {
+  padding-right: 100px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#category {
+  padding-right: 100px;
+  padding: 1px 0 2px;
+  font-size: 17px;
+  border: solid 1px #3b69f5;
+  border-radius: 5px;
+}
+
+.detail_item {
+  position: relative;
+  left: 10px;
+}
+
+.price_range {
+  position: relative;
+  top: 13px;
+}
+
+.price_range select{
+  font-size: 17px;
+  border: solid 1px #3b69f5;
+  border-radius: 5px;
+  padding: 1px 0 2px;
+}
+
+.price_range span {
+  padding: 2px;
+}
+/*-------  detailed conditions  --------*/
+/*-------  footer  --------*/
+footer {
+  box-sizing: content-box;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 20px 10px 0;
+  font-size: 14px;
+  color: rgb(94, 94, 94);
+  background: #fff;
+  text-align: center;
+}
+
+.copyright {
+  padding: 10px 0 20px;
+  border-top: 1px solid #ccc;
+}
+/*-------  footer  --------*/
+/*-------  result  --------*/
+.item_card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #000;
+  overflow:hidden;
+}
+
+.item_card table {
+  margin: 0px;
+}
+
+.item_card th {
+  font-size: 22px;
+  padding: 0 5px;
+}
+
+.result_img {
+  float: left;
+}
+
+.result_detail {
+  float: left;
+  padding: 15px;
+}
+
+.result_error {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+  color: #d41a1a;
+  left: 100px;
+  position: relative;
+}
+
+.result_name {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.result_price, .result_store {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.result_price span {
+  font-size: 25px;
+}
+
+.transition {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  background-color: rgb(134, 197, 240);
+  border: 0.5px solid;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.transition:hover {
+  opacity: 0.9;
+}
+
+.paging {
+	margin-top: 10px;
+	text-align: center;
+}
+.paging li {
+	display: inline;
+	list-style: none;
+}
+.paging button {
+  font-size: 15px;
+  font-weight: bold;
+}
+/*-------  result  --------*/
+/*-------  responsive  --------*/
+.btn-gnavi, p {
+  margin-block-start: unset;
+  margin-block-end: unset;
+}
+
+#global-navi {
+  top: 0;
+  right: 0px;
+  width: 100%;
+}
+#wrapper nav ul li{
+  display:inline-block;
+  font-size: 16px;
+  padding:  30px 20px 25px 28px;
+}
+/*-------  responsive  --------*/
