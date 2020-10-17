@@ -132,9 +132,18 @@
     font-size: 16px;
   }
 
+  .detail {
+    right: 50px;
+  }
+
   .detail td {
     font-size: 14px;
     padding-right: 50px;
+  }
+
+  input[type="checkbox"] + label:before {
+    width: 17px;
+    height: 17px;
   }
 
   .menu_item table, .result_item table {
@@ -237,8 +246,8 @@
   }
 
   input[type="checkbox"] + label:before {
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
   }
 
   .content_form {
@@ -286,7 +295,7 @@
   }
 
   .price_range {
-    right: 63px;
+    right: 50px;
   }
 
   .price_range select {
@@ -295,7 +304,6 @@
 
   .detail_item {
     left: unset;
-    text-align: center;
   }
 
   .detail tr {
