@@ -1,5 +1,5 @@
 # 最安値検索(yahoo!ショッピング&amp;楽天市場)  [Laravel版]
-Laravel版はまだ未完成です
+Laravel版はまだ未完成です  
 PHP版（Laravel未使用）はこちら  
 https://github.com/Asuma-Samua/Search-Price_PHP
 ## アプリケーションURL
