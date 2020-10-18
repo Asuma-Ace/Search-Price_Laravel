@@ -227,7 +227,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'rakuten_id' => env('RAKUTEN_APPLICATION_ID', false),
+        'rakuten_key' => env('RAKUTEN_APPLICATION_SEACRET', false),
+        'yahoo_id' => env('YAHOO_CLIENT_ID', false),
+        'yahoo_key' => env('YAHOO_CLIENT_SEACRET', false),
     ],
 
 ];

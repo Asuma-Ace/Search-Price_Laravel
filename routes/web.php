@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 // 商品検索画面
 Route::get('/', 'SearchPriceController@search')->name('search');
 
+// 商品検索処理
+Route::post('/search', 'SearchPriceController@searchItem')->name('search.item');
+
 // 商品検索結果画面
 Route::get('/result', 'SearchPriceController@searchResult')->name('search.result');
 
@@ -24,7 +27,7 @@ Route::group(['middleware' => 'guest'], function(){
   Route::get('/user/login', 'SearchPriceController@login')->name('user.login');
 
   // ログイン処理
-  Route::post('login', 'Auth\LoginController@login');
+  Route::post('login', 'Auth\LoginController@login')->name('login');
 });
 
 // ログイン完了画面
@@ -32,7 +35,7 @@ Route::get('/user/complete', 'SearchPriceController@userComplete')->name('user.c
 
 Route::group(['middleware' => 'auth'], function(){
   // ログアウト処理
-  Route::get('logout', 'Auth\LoginController@logout');
+  Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 });
 
 // ログアウト完了画面
