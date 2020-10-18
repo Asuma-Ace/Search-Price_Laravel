@@ -1,61 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 最安値検索(yahoo!ショッピング&amp;楽天市場)  [Laravel版]
+PHP版（Laravel未使用）  
+https://github.com/Asuma-Samua/Search-Price_PHP
+## アプリケーションURL
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+## 概要
+検索したキーワードに関する商品を「Yahoo!ショッピング」と「楽天市場」から同時に価格の安い順に取得します。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 使用技術
+・Laravel Framework 7.28.4
+・PHP 7.2.14  
+・HTML5  
+・css3  
+・Bootstrap v4.5.2  
+・JavaScript (ES6)  
+・jQuery v3.5.1  
+・MySQL 5.6.35  
+・Apache  
+・Heroku  
+　￮ClearDB MySQL  
+・Yahoo!ショッピングAPI  
+・楽天市場商品検索API  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 実装機能
+### 検索関連
+・キーワード検索機能  
+・条件絞り込み機能  
+・ページネーション機能  
+・検索結果件数取得機能  
+・ショッピングサイト遷移  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### ユーザー関連
+・登録機能  
+・ログイン・アウト機能  
+・ログイン情報（アドレス・パスワード）保存機能  
 
-## Learning Laravel
+### お問い合わせ関連
+・お問い合わせ作成機能  
+・文字数カウント機能  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 使い方
+1. ヘッダーの右側にある「**新規会員登録**」を押して新規会員登録を行ってください。（会員登録をしなくてもご利用いただけます）
+2. 「*ユーザー名*」「*メールアドレス*」「*パスワード*」を入力して会員登録を完了させてください。
+3. ヘッダーの右側にある「**ログイン**」を押してログインしてください。次回のログインをスムーズに行いたい場合、「**□メールアドレスとパスワードを保存**」をチェックしてください。
+4. トップページで「*検索キーワード*」を入力し、「*詳細条件*」を選択してください。その後「**🔍検索**」を押して検索を行います。
+5. 検索キーワードに関する商品を価格の安い順に20件取得します。さらに件数を取得したい場合、ページ下の「**次のページへ**」を押すことで次の20件を取得します。
+6. ご質問がある場合、ヘッダーの右側にある「**お問い合わせ**」から必要事項を入力しお問い合わせフォームを送信できます。
+7. ヘッダーの右側にある「**ログアウト**」ボタンを押してログアウトできます。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![sample image1](sample_img1.png)
 
-## Laravel Sponsors
+![sample image2](sample_img2.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 動作環境
+Windows  
 
-### Premium Partners
+## ライセンス
+[MIT license](https://opensource.org/licenses/MIT)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+## 作成者
+[三吉 明日真](https://github.com/Asuma-Samua)
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 参照
+[Yahoo!ショッピング_API](https://developer.yahoo.co.jp/sample/shopping/)  
+[楽天市場_API](https://webservice.rakuten.co.jp/api/ichibaitemsearch/)
