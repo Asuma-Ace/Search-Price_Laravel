@@ -6,7 +6,7 @@
   <div class="search">
     <div class="container">
       <div class="search_key">
-        <input id="keyword" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" type="search" name="keyword" size="50" maxlength="64" placeholder="検索キーワードを入力してください" value="" required>
+        <input id="keyword" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" type="search" name="keyword" size="50" maxlength="64" placeholder="検索キーワードを入力してください" value="{{ old('keyword') }}" required>
         <button type="submit" id="search_btn"><i class="fas fa-search"></i>検索</button>
       </div>
     </div>
@@ -16,6 +16,14 @@
     <div class="container menu">
       <div class="condition_title">詳細条件<script class="menu_arrow open">＞</script></div>
     </div>
+
+    @if ($errors->any())
+    <div class="error_container">
+      @foreach ($errors->all() as $error)
+        <div class="error">{{ $error }}</div>
+      @endforeach
+    </div>
+    @endif
 
     <div class="menu_item">
       <table>
@@ -39,10 +47,9 @@
           <th class="subtitle">＞カテゴリ</th>
             <td class="detail detail_item">
               <select name="category" id="category">
-                <?php $categories = ['すべてのカテゴリ', 'レディースファッション', 'メンズファッション', '腕時計', 'ジュエリー・アクセサリー', '食品','スイーツ・お菓子', '水・ソフトドリンク', 'ビール・洋酒', '日本酒・焼酎', 'スポーツ・アウトドア', 'ダイエット・健康', '美容・コスメ', 'パソコン・周辺機器', 'スマートフォン・タブレット', 'TV・オーディオ・カメラ', '家電', '家具・インテリア', '花・ガーデン・DIY', '日用品・雑貨・文具', 'キッチン用品', '生き物・ペット用品', '楽器・音響機器', 'おもちゃ', 'TVゲーム', 'ホビー', 'キッズ・ベビー・マタニティ', '車・バイク', '車用品・バイク用品', 'CD・DVD', '本・雑誌・コミック', 'サービス・レンタル'];?>
-                <?php foreach ($categories as $k => $v) : ?>
-                  <option value="<?php echo $k; ?>"><?php echo $v; ?></option>
-                <?php endforeach; ?>
+                @foreach ($categories as $k => $v)
+                  <option value="{{ $k }}" @if (old('category')==$k) selected @endif>{{ $v }}</option>
+                @endforeach
               </select>
             </td>
         </tr>
@@ -51,16 +58,15 @@
           <th class="subtitle">＞価格帯</th>
             <td class="price_range detail_item">
               <select name="minPrice" id="minPrice">
-                <?php $minPrices = [1 => '下限なし', 1000 => '1000', 3000 => '3000', 5000 => '5000', 10000 => '10000', 20000 => '20000', 30000 => '30000', 50000 => '50000']; ?>
-                <?php foreach ($minPrices as $k => $v): ?>
-                  <option value="<?php echo $k; ?>"><?php echo $v; ?></option>
-                <?php endforeach; ?>
+                @foreach ($minPrices as $k => $v)
+                  <option value="{{ $k }}" @if (old('minPrice')==$k) selected @endif>{{ $v }}</option>
+                @endforeach
               </select><span>円～</span>
               <select name="maxPrice" id="maxPrice">
-                <?php $maxPrices = [1000 => '1000', 3000 => '3000', 5000 => '5000', 10000 => '10000', 20000 => '20000', 30000 => '30000', 50000 => '50000', 99999999 => '上限なし']; ?>
-                <?php foreach ($maxPrices as $k => $v): ?>
-                  <option value="<?php echo $k; ?>"<?php if ($k == 99999999) echo 'selected'; ?>><?php echo $v; ?></option>
-                <?php endforeach; ?>
+                @foreach ($maxPrices as $k => $v)
+                  <option value="{{ $k }}" @if (old('maxPrice')==$k) selected @endif>{{ $v }}</option>
+                @endforeach
+                  <option value="99999999" @if (old('maxPrice')==99999999 || !old('maxPrice')) selected @endif>上限なし</option>
               </select><span>円</span>
             </td>
         </tr>
