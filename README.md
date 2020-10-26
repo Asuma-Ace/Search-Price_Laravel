@@ -48,20 +48,26 @@ $ git clone https://github.com/Asuma-Samua/Search-Price_Laravel.git
 ### laravelアプリケーション起動
 
 #### 関連ライブラリインストール
+```
 1. $ composer install
+```
 
 #### 環境変数入力(.envファイルの変更)
-1. APP_KEYを生成 $ php artisan key:generate  
+1. APP_KEYを生成```$ php artisan key:generate```  
 2. DB設定を使用するDBに合わせて変更  
 
 #### データベース作成
+```
 $ php artisan migrate
+```
 
 #### テストデータ作成
+```
 $ php artisan db:seed
+```
 
 #### サーバー起動
-1. development環境の場合 $ php artisan serve  
+1. development環境の場合```$ php artisan serve```  
 2. production環境の場合 各自の環境に合わせてサーバーを起動してください。
 
 ## 使い方
