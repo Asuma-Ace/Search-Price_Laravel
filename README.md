@@ -49,7 +49,7 @@ $ git clone https://github.com/Asuma-Samua/Search-Price_Laravel.git
 1．$composer install
 
 #### 環境変数入力(.envファイルの変更)
-1．APP_KEYを生成 $php artisan key:generate  
+1. APP_KEYを生成 $php artisan key:generate  
 2. DB設定を使用するDBに合わせて変更  
 
 #### データベース作成
