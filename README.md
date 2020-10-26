@@ -42,7 +42,9 @@ https://github.com/Asuma-Samua/Search-Price_PHP
 
 ## 初期設定
 ### ディレクトリクローン
+```
 $ git clone https://github.com/Asuma-Samua/Search-Price_Laravel.git  
+```
 ### laravelアプリケーション起動
 
 #### 関連ライブラリインストール
