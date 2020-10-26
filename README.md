@@ -46,7 +46,7 @@ $ git clone https://github.com/Asuma-Samua/Search-Price_Laravel.git
 ### laravelアプリケーション起動
 
 #### 関連ライブラリインストール
-1．$composer install
+1. $composer install
 
 #### 環境変数入力(.envファイルの変更)
 1. APP_KEYを生成 $php artisan key:generate  
