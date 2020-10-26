@@ -1,5 +1,5 @@
 # 最安値検索(yahoo!ショッピング&amp;楽天市場)  [Laravel版]
-Laravel版は完成しておりますが、Fat Controllerなため現在修正中です。 
+Laravel版は完成しておりますが、Fat Controllerなため現在修正中です。  
 PHP版（Laravel未使用）はこちら  
 https://github.com/Asuma-Samua/Search-Price_PHP
 ## アプリケーションURL
@@ -39,6 +39,28 @@ https://github.com/Asuma-Samua/Search-Price_PHP
 ### お問い合わせ関連
 ・お問い合わせ作成機能  
 ・文字数カウント機能  
+
+## 初期設定
+### ディレクトリクローン
+$ git clone https://github.com/Asuma-Samua/Search-Price_Laravel.git  
+### laravelアプリケーション起動
+
+#### 関連ライブラリインストール
+1．$composer install
+
+#### 環境変数入力(.envファイルの変更)
+1．APP_KEYを生成 $php artisan key:generate  
+2. DB設定を使用するDBに合わせて変更  
+
+#### データベース作成
+$ php artisan migrate
+
+#### テストデータ作成
+$ php artisan db:seed
+
+#### サーバー起動
+1. development環境の場合 $ php artisan serve  
+2. production環境の場合 各自の環境に合わせてサーバーを起動してください。
 
 ## 使い方
 1. ヘッダーの右側にある「**新規会員登録**」を押して新規会員登録を行ってください。（会員登録をしなくてもご利用いただけます）
