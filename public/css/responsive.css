@@ -324,4 +324,7 @@
     margin: auto;
   }
 
+  img {
+    margin: 0;
+  }
 }

@@ -288,6 +288,7 @@ footer {
 .item_card {
   margin-bottom: 20px;
   padding: 20px;
+  padding-left: 0px;
   border: 1px solid #000;
   overflow:hidden;
 }
@@ -298,16 +299,25 @@ footer {
 
 .item_card th {
   font-size: 22px;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .result_img {
   float: left;
 }
 
+img {
+  margin: 30px 0;
+}
+
 .result_detail {
   float: left;
   padding: 15px;
+}
+
+.error_container {
+  font-weight: bold;
+  text-align: center;
 }
 
 .result_error {
