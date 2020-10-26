@@ -46,7 +46,7 @@
     <!-- mail address -->
 
     <!-- sns -->
-    <div class="card-body text-center snsbox">
+    <!-- <div class="card-body text-center snsbox">
       <h3 class="h3 card-title text-center mt-2">SNSアカウントでログイン</h3>
 
       <div class="g-signin2" data-onsuccess="signOut"></div>
@@ -69,7 +69,7 @@
         </button>
       </form>
 
-    </div>
+    </div> -->
     <!-- sns -->
 
   </div>
