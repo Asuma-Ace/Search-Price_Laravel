@@ -5,6 +5,8 @@ return [
     'rakuten_key' => env('RAKUTEN_APPLICATION_SEACRET', false),
     'yahoo_id' => env('YAHOO_CLIENT_ID', false),
     'yahoo_key' => env('YAHOO_CLIENT_SEACRET', false),
+
+    'log' => 'errorlog',
     
     /*
     |--------------------------------------------------------------------------
