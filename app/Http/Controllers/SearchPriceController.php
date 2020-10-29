@@ -443,7 +443,7 @@ class SearchPriceController extends Controller
      * 
      * @return view
      */
-    public function complete()
+    public function contactComplete()
     {
         return view('contact.complete');
     }
