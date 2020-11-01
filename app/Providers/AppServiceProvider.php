@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         Schema::defaultStringLength(191);
+        // ローカル環境で動かす場合以下3行をコメントアウトする
         if (\App::environment('production')) {
             \URL::forceScheme('https');
         }
