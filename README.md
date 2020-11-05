@@ -9,7 +9,7 @@ https://search-price-laravel.herokuapp.com/
 検索したキーワードに関する商品を「Yahoo!ショッピング」と「楽天市場」から同時に価格の安い順に取得します。
 
 ## 使用技術
-・Laravel Framework 7.28.4
+・Laravel Framework 7.28.4  
 ・PHP 7.2.14  
 ・HTML5  
 ・css3  
