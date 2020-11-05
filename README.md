@@ -9,7 +9,7 @@ https://search-price-laravel.herokuapp.com/
 検索したキーワードに関する商品を「Yahoo!ショッピング」と「楽天市場」から同時に価格の安い順に取得します。
 
 ## 使用技術
-・Laravel Framework 7.28.4
+・Laravel Framework 7.28.4  
 ・PHP 7.2.14  
 ・HTML5  
 ・css3  
@@ -61,6 +61,23 @@ https://search-price-laravel.herokuapp.com/
 #### サーバー起動
 1. development環境の場合 ``` $ php artisan serve ```  
 2. production環境の場合 各自の環境に合わせてサーバーを起動してください。
+
+#### ローカル環境で動かす場合
+「app/Providers/AppServiceProvider.php」内29行目から31行目をコメントアウトしてください
+```
+class AppServiceProvider extends ServiceProvider
+{
+        ...
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+        // ローカル環境で動かす場合以下3行をコメントアウトする
+        // if (\App::environment('production')) {
+        //     \URL::forceScheme('https');
+        // }
+    }
+}
+```
 
 ## 使い方
 1. ヘッダーの右側にある「**新規会員登録**」を押して新規会員登録を行ってください。（会員登録をしなくてもご利用いただけます）
