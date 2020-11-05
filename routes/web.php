@@ -24,14 +24,14 @@ Route::get('/result', 'SearchPriceController@searchResult')->name('search.result
 
 Route::group(['middleware' => 'guest'], function(){
   // ログイン画面
-  Route::get('/user/login', 'SearchPriceController@login')->name('user.login');
+  Route::get('/user/login', 'LoginController@login')->name('user.login');
 
   // ログイン処理
   Route::post('login', 'Auth\LoginController@login')->name('login');
 });
 
 // ログイン完了画面
-Route::get('/user/complete', 'SearchPriceController@userComplete')->name('user.complete');
+Route::get('/user/complete', 'LoginController@userComplete')->name('user.complete');
 
 Route::group(['middleware' => 'auth'], function(){
   // ログアウト処理
@@ -39,39 +39,39 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 // ログアウト完了画面
-Route::get('/user/logout', 'SearchPriceController@userLogout')->name('user.logout');
+Route::get('/user/logout', 'LoginController@userLogout')->name('user.logout');
 
 Route::group(['middleware' => 'guest'], function(){
   // 新規会員登録画面
-  Route::get('/join/new', 'SearchPriceController@new')->name('join.new');
+  Route::get('/join/new', 'JoinController@new')->name('join.new');
 
   // 新規会員登録確認ボタン処理
-  Route::post('/join/postUser', 'SearchPriceController@postUser')->name('join.postUser');
+  Route::post('/join/postUser', 'JoinController@postUser')->name('join.postUser');
 
   // 新規会員登録確認画面
-  Route::get('/join/check', 'SearchPriceController@check')->name('join.check');
+  Route::get('/join/check', 'JoinController@check')->name('join.check');
 
   // 新規会員登録完了/戻るボタン処理
-  Route::post('/join/send', 'SearchPriceController@joinSend')->name('join.send');
+  Route::post('/join/send', 'JoinController@joinSend')->name('join.send');
 
   // 新規会員登録完了画面
-  Route::get('/join/thanks', 'SearchPriceController@thanks')->name('join.thanks');
+  Route::get('/join/thanks', 'JoinController@thanks')->name('join.thanks');
 });
 
 // お問い合わせ作成画面
-Route::get('/contact/form', 'SearchPriceController@form')->name('contact.form');
+Route::get('/contact/form', 'ContactController@form')->name('contact.form');
 
 // 問い合わせ確認ボタン処理
-Route::post('/contact/postContact', 'SearchPriceController@postContact')->name('contact.postContact');
+Route::post('/contact/postContact', 'ContactController@postContact')->name('contact.postContact');
 
 // お問い合わせ確認画面
-Route::get('/contact/confirm', 'SearchPriceController@confirm')->name('contact.confirm');
+Route::get('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
 
 // お問い合わせ送信完了/戻るボタン処理
-Route::post('/contact/send', 'SearchPriceController@contactSend')->name('contact.send');
+Route::post('/contact/send', 'ContactController@contactSend')->name('contact.send');
 
 // お問い合わせ送信完了画面
-Route::get('/contact/complete', 'SearchPriceController@contactComplete')->name('contact.complete');
+Route::get('/contact/complete', 'ContactController@contactComplete')->name('contact.complete');
 
 // Auth::routes();
 
