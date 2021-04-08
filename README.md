@@ -102,7 +102,7 @@ Windows
 お問い合わせフォーム完了画面内でメールの送信をしているとあるが、メール送信機能はまだ未実装なため送られておりません。
 
 ## 作成者
-[三吉 明日真](https://github.com/Asuma-Samua)
+[Asuma Miyoshi](https://github.com/Asuma-Ace)
 
 ## 参照
 [Yahoo!ショッピング_API](https://developer.yahoo.co.jp/sample/shopping/)  
