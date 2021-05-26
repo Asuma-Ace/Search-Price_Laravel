@@ -5,6 +5,6 @@
 <!-- Material Design Bootstrap -->
 <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
 <!-- Custom styles -->
-<link rel="stylesheet" href="{{ mix('css/style.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
 @yield('css')
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
