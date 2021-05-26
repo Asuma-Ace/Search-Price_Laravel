@@ -23,7 +23,8 @@
   @else
     ゲスト
   @endauth
-</strong>さん<p></div>
+</strong>さん<p>
+</div>
   @yield('content')
 </main>
 
